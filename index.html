@@ -3,70 +3,100 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Nama Kamu — Front-End Portfolio</title>
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <title>Faizal Reza — Portfolio</title>
+  <meta name="description" content="Portfolio ringkas berisi sorotan, catatan review materi, dan rencana belajar." />
   <style>
-    body{font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Arial,sans-serif;line-height:1.6;margin:0}
-    header,footer{padding:24px}
-    header{position:sticky;top:0;background:#fff;border-bottom:1px solid #eee}
-    .wrap{max-width:960px;margin:auto;padding:24px}
-    .hero{padding:64px 24px;background:#f8fafc}
-    .tag{display:inline-block;padding:4px 10px;border:1px solid #ddd;border-radius:999px;font-size:12px}
-    .grid{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
-    a{color:#2563eb;text-decoration:none}
-    a:hover{text-decoration:underline}
-    .card{border:1px solid #eee;border-radius:12px;padding:16px;background:#fff}
-    .muted{color:#6b7280;font-size:14px}
-    .btn{display:inline-block;padding:10px 14px;border-radius:10px;border:1px solid #ddd}
+    :root{
+      --bg:#0b1220; --surface:#0f172a; --muted:#94a3b8; --text:#e5e7eb; --brand:#22c55e; --card:#111827;
+      --radius:14px;
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0;background:var(--bg);color:var(--text);font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Arial,sans-serif;line-height:1.6}
+    a{color:#93c5fd;text-decoration:none} a:hover{text-decoration:underline}
+    .wrap{max-width:1100px;margin:auto;padding:0 20px}
+    header{position:sticky;top:0;z-index:10;background:rgba(11,18,32,.8);backdrop-filter:blur(6px);border-bottom:1px solid #1f2937}
+    header .bar{display:flex;align-items:center;justify-content:space-between;padding:14px 0}
+    nav a{margin-left:16px;color:var(--muted)}
+    nav a:hover{color:#c7d2fe}
+    .hero{padding:72px 0;background:linear-gradient(180deg,rgba(34,197,94,.08),transparent)}
+    .hero h1{font-size:40px;margin:0 0 8px;font-weight:800}
+    .hero p{color:var(--muted);max-width:720px;margin:0 0 18px}
+    .btn{display:inline-block;padding:10px 16px;border:1px solid #334155;border-radius:12px;background:#0b1327}
+    .btn.primary{background:var(--brand);color:#052e16;border-color:transparent;font-weight:600}
+    section{padding:56px 0}
+    h2{font-size:26px;margin:0 0 14px}
+    .muted{color:var(--muted)}
+    .grid{display:grid;gap:18px;grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
+    .card{background:var(--card);border:1px solid #1f2937;border-radius:var(--radius);padding:18px}
+    .card h3{margin:0 0 6px;font-size:18px}
+    .tag{display:inline-block;font-size:12px;color:#10b981;border:1px solid #164e3f;border-radius:999px;padding:2px 10px;margin-bottom:8px}
+    .list{display:grid;gap:8px}
+    footer{border-top:1px solid #1f2937;padding:20px 0;color:var(--muted)}
+    @media (max-width:480px){.hero h1{font-size:32px}}
   </style>
 </head>
 <body>
   <header>
-    <div class="wrap">
-      <strong>Nama Kamu</strong> · <a href="#projects">Proyek</a> · <a href="#about">Tentang</a> · <a href="#contact">Kontak</a>
+    <div class="wrap bar">
+      <strong>Faizal Reza</strong>
+      <nav>
+        <a href="#projects">Sorotan</a>
+        <a href="#about">Tentang</a>
+        <a href="#contact">Kontak</a>
+      </nav>
     </div>
   </header>
 
-  <section class="hero">
-    <div class="wrap">
-      <span class="tag">Front-End Enthusiast</span>
-      <h1>Halo, saya Nama Kamu</h1>
-      <p>Saya fokus belajar frontend dan mendokumentasikan <em>review materi</em>, insight, serta eksperimen kecil di sini.</p>
-      <p><a class="btn" href="https://www.linkedin.com/in/username" target="_blank" rel="noreferrer">LinkedIn</a>
-         <a class="btn" href="https://github.com/username" target="_blank" rel="noreferrer">GitHub</a></p>
-    </div>
-  </section>
+  <main class="wrap">
+    <section class="hero">
+      <span class="tag">Front-End Learner · Catatan Review</span>
+      <h1>Halo, saya Faizal Reza</h1>
+      <p>Saya sedang fokus memperdalam front-end melalui <em>review materi</em>, rangkuman belajar, dan eksperimen kecil. Halaman ini jadi tempat singkat untuk menaruh sorotan dan rencana belajar.</p>
+      <p>
+        <a class="btn primary" href="#projects">Lihat Sorotan</a>
+        <a class="btn" href="https://github.com/faisalresa22" target="_blank" rel="noreferrer">GitHub</a>
+        <a class="btn" href="https://www.linkedin.com/in/username" target="_blank" rel="noreferrer">LinkedIn</a>
+      </p>
+    </section>
 
-  <section class="wrap" id="projects">
-    <h2>Sorotan</h2>
-    <div class="grid">
-      <article class="card">
-        <h3>Review: Digital Skill Fair 42.0 — Front-End</h3>
-        <p class="muted">Catatan singkat: struktur halaman, konsistensi desain, layout responsif, dan alur kerja rapi.</p>
-        <p><a href="link-posting-linkedin-atau-notes" target="_blank">Baca ringkasannya →</a></p>
-      </article>
-      <article class="card">
-        <h3>Ide: Landing Page Latihan</h3>
-        <p class="muted">Rencana komponen: navbar · hero · fitur · CTA · footer. Fokus: aksesibilitas & keterbacaan.</p>
-        <p><a href="#" target="_blank">Draft wireframe (opsional) →</a></p>
-      </article>
-    </div>
-  </section>
+    <section id="projects">
+      <h2>Sorotan</h2>
+      <div class="grid">
+        <article class="card">
+          <h3>Review: Digital Skill Fair 42.0 — Front-End</h3>
+          <p class="muted">Catatan hasil meninjau materi: cara menyusun struktur halaman, menjaga konsistensi desain, layout responsif, dan alur kerja yang rapi. Diskusi mentor–peserta membantu membuka perspektif dan merapikan pola pikir komponen.</p>
+          <p><a href="https://www.linkedin.com/feed/" target="_blank" rel="noreferrer">Lihat posting LinkedIn →</a></p>
+        </article>
+        <article class="card">
+          <h3>Ide: Landing Page Latihan</h3>
+          <p class="muted">Rancangan komponen: navbar · hero · highlight fitur · CTA · footer. Fokus ke keterbacaan, aksesibilitas, dan konsistensi spacing/typography.</p>
+          <div class="list">
+            <span>• Wireframe sederhana</span>
+            <span>• Checklist styling sebelum publish</span>
+            <span>• Rencana versi 1 → 1.1 (iterasi kecil)</span>
+          </div>
+        </article>
+        <article class="card">
+          <h3>Catatan Belajar</h3>
+          <p class="muted">Rencana mingguan: review singkat → praktek kecil → rangkum insight. Target: progres bertahap yang konsisten.</p>
+          <p><a href="#" aria-disabled="true">Akan ditautkan kemudian</a></p>
+        </article>
+      </div>
+    </section>
 
-  <section class="wrap" id="about">
-    <h2>Tentang Saya</h2>
-    <p>Saya tertarik pada praktik FE yang rapi dan bisa dipelihara. Saat ini banyak melakukan <em>review materi</em> dan menulis catatan terstruktur sebelum membangun proyek.</p>
-  </section>
+    <section id="about">
+      <h2>Tentang</h2>
+      <p class="muted">Saya tertarik pada praktik front-end yang rapi dan mudah dipelihara. Saat ini lebih banyak melakukan review materi, menyusun ringkasan, dan menuliskan ide sebelum mengeksekusi proyek.</p>
+    </section>
 
-  <section class="wrap" id="contact">
-    <h2>Kontak</h2>
-    <p>Email: namakamu@email.com</p>
-  </section>
+    <section id="contact">
+      <h2>Kontak</h2>
+      <p class="muted">Email: <a href="mailto:email@domain.com">email@domain.com</a> · LinkedIn: <a href="https://www.linkedin.com/in/username" target="_blank" rel="noreferrer">@username</a></p>
+    </section>
+  </main>
 
   <footer>
-    <div class="wrap">
-      © <span id="y"></span> Nama Kamu
-    </div>
+    <div class="wrap">© <span id="y"></span> Faizal Reza</div>
   </footer>
   <script>document.getElementById('y').textContent=new Date().getFullYear()</script>
 </body>
