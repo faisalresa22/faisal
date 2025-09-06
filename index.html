@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Nama Kamu — Front-End Portfolio</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <style>
+    body{font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Arial,sans-serif;line-height:1.6;margin:0}
+    header,footer{padding:24px}
+    header{position:sticky;top:0;background:#fff;border-bottom:1px solid #eee}
+    .wrap{max-width:960px;margin:auto;padding:24px}
+    .hero{padding:64px 24px;background:#f8fafc}
+    .tag{display:inline-block;padding:4px 10px;border:1px solid #ddd;border-radius:999px;font-size:12px}
+    .grid{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
+    a{color:#2563eb;text-decoration:none}
+    a:hover{text-decoration:underline}
+    .card{border:1px solid #eee;border-radius:12px;padding:16px;background:#fff}
+    .muted{color:#6b7280;font-size:14px}
+    .btn{display:inline-block;padding:10px 14px;border-radius:10px;border:1px solid #ddd}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap">
+      <strong>Nama Kamu</strong> · <a href="#projects">Proyek</a> · <a href="#about">Tentang</a> · <a href="#contact">Kontak</a>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="wrap">
+      <span class="tag">Front-End Enthusiast</span>
+      <h1>Halo, saya Nama Kamu</h1>
+      <p>Saya fokus belajar frontend dan mendokumentasikan <em>review materi</em>, insight, serta eksperimen kecil di sini.</p>
+      <p><a class="btn" href="https://www.linkedin.com/in/username" target="_blank" rel="noreferrer">LinkedIn</a>
+         <a class="btn" href="https://github.com/username" target="_blank" rel="noreferrer">GitHub</a></p>
+    </div>
+  </section>
+
+  <section class="wrap" id="projects">
+    <h2>Sorotan</h2>
+    <div class="grid">
+      <article class="card">
+        <h3>Review: Digital Skill Fair 42.0 — Front-End</h3>
+        <p class="muted">Catatan singkat: struktur halaman, konsistensi desain, layout responsif, dan alur kerja rapi.</p>
+        <p><a href="link-posting-linkedin-atau-notes" target="_blank">Baca ringkasannya →</a></p>
+      </article>
+      <article class="card">
+        <h3>Ide: Landing Page Latihan</h3>
+        <p class="muted">Rencana komponen: navbar · hero · fitur · CTA · footer. Fokus: aksesibilitas & keterbacaan.</p>
+        <p><a href="#" target="_blank">Draft wireframe (opsional) →</a></p>
+      </article>
+    </div>
+  </section>
+
+  <section class="wrap" id="about">
+    <h2>Tentang Saya</h2>
+    <p>Saya tertarik pada praktik FE yang rapi dan bisa dipelihara. Saat ini banyak melakukan <em>review materi</em> dan menulis catatan terstruktur sebelum membangun proyek.</p>
+  </section>
+
+  <section class="wrap" id="contact">
+    <h2>Kontak</h2>
+    <p>Email: namakamu@email.com</p>
+  </section>
+
+  <footer>
+    <div class="wrap">
+      © <span id="y"></span> Nama Kamu
+    </div>
+  </footer>
+  <script>document.getElementById('y').textContent=new Date().getFullYear()</script>
+</body>
+</html>
